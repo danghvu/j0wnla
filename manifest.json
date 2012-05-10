@@ -1,0 +1,24 @@
+{
+  "name": "J0wnLa" ,
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Joomla 2.5.2 exploit - Author: w00d a.k.a wind@k from hvaonline.net. 0-day from jeffchannell.com",
+  "icons": {"16":"j0wnla.ico",
+            "48":"j0wnla.ico",
+            "128":"j0wnla.ico"},
+  "browser_action": {
+    "default_icon": "j0wnla.ico",
+    "default_popup": "j0wnla.html"
+  },
+  "permissions": [
+    "tabs",
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery-1.7.2.min.js", "j0wnla.js"],
+	  "run_at": "document_start"
+    }
+  ]
+}
